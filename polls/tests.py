@@ -20,7 +20,7 @@ class QuestionDetailViewTests(TestCase):
 
     def test_past_question(self):
         """
-        В подробном представлении вопроса с pub_date в прошлом отображается текст
+        В подробном представлении вопроса с pub_date в прошлом отображается текст,
         """
         past_question = create_question(question_text='Past Question.', days=-5)
         url = reverse('polls:detail', args=(past_question.id,))
